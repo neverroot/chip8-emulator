@@ -117,6 +117,7 @@ def parse(opcode):
  
 def main():
     emulator = Emulator()
+    # emulator currently loops endlessly displaying random bits on screen
     emulator.loop()
     with open("IBMLogo.ch8","rb") as f:
         data = f.read()
