@@ -119,7 +119,7 @@ def main():
     emulator = Emulator()
     # emulator currently loops endlessly displaying random bits on screen
     emulator.loop()
-    with open("IBMLogo.ch8","rb") as f:
+    with open("ch8s\\IBMLogo.ch8","rb") as f:
         data = f.read()
     d = Disassembler(data)
     #d.disassemble()
