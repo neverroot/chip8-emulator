@@ -14,8 +14,9 @@ class Disassembler():
     # parse raw bytes into 2-byte opcodes
     def disassemble(self):
         opcodes = [int.from_bytes(self.rom[i:i+2],'big') for i in range(0,len(self.rom),2)]
-        for opcode in opcodes:
-            parse(opcode)
+        print(opcodes)
+        while True:
+            print(opcodes.pop())
 
 # disassemble opcode to respective instruction
 def parse(opcode):
@@ -114,16 +115,16 @@ def parse(opcode):
     else:
         print("Undefined opcode")
 
- 
+
 def main():
-    emulator = Emulator()
-    # emulator currently loops endlessly displaying random bits on screen
-    emulator.loop()
-    with open("ch8s\\IBMLogo.ch8","rb") as f:
+    rom = "ch8s\\IBMLogo.ch8"
+    with open(rom,"rb") as f:
         data = f.read()
+    # emulator currently loops endlessly displaying random bits on screen
+    emulator = Emulator(data)
+    emulator.loop()
     d = Disassembler(data)
     #d.disassemble()
-
 
 
     
