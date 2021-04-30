@@ -117,16 +117,17 @@ def parse(opcode):
 
 
 def main():
-    rom = "ch8s\\IBMLogo.ch8"
+    rom = "ch8s\\IBM Logo.ch8"
     with open(rom,"rb") as f:
         data = f.read()
     # emulator currently loops endlessly displaying random bits on screen
     emulator = Emulator(data)
+    emulator.load()
     emulator.loop()
     d = Disassembler(data)
-    #d.disassemble()
+    d.disassemble()
 
 
-    
-    
+
+
 main()
