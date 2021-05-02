@@ -117,7 +117,7 @@ def parse(opcode):
 
 
 def main():
-    rom = "ch8s\\IBM Logo.ch8"
+    rom = "ch8s\\Connect4.ch8"
     with open(rom,"rb") as f:
         data = f.read()
     # emulator currently loops endlessly displaying random bits on screen
