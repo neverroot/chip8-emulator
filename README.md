@@ -1,17 +1,21 @@
 # chip8-emulator
 
-Chip 8 Emulator written in python 3
+Chip 8 Emulator written in pure Python 3
 
 NOTE: I'm not going to implement audio, mainly because I don't care much for the beeps
 
 Default settings = base address of rom = 0x200, base address of font = 0x50, no debug mode
+
 To use quickly use emulaator with default settings:
+
 `python3 main.py [path to rom]`
 
 To use emulator with debug mode on:
+
 `python3 main.py [path to rom] -d`
 
 To use emulator with custom base addresses for font and rom:
+
 `python3 main.py [path to rom] --rom_base 592 --font_base 100`
 
 
